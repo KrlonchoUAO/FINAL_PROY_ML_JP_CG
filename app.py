@@ -64,11 +64,11 @@ input_data = pd.DataFrame({
 })
 
 
-st.dataframe(input_data)
+"""st.dataframe(input_data)
 # Rellenar variables faltantes con 0
 for col in pipeline.named_steps['preprocessor'].transformers_[1][1].categories_:
     if col not in input_data.columns:
-     input_data[col] = 0
+     input_data[col] = 0"""
 
 # Predicción
 
