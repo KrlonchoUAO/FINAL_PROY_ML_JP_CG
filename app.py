@@ -4,20 +4,7 @@ import joblib
 import pandas as pd
 
 # Cargar el pipeline final
-"""try:
-    with st.spinner("Cargando modelo..."):
-        pipeline = joblib.load('modelo_final_pipeline.pkl')
-except FileNotFoundError:
-    st.error("Archivo 'modelo_final_pipeline.pkl' no encontrado.")
-    st.stop()
-except Exception as e:
-    st.error(f"Error al cargar el modelo: {e}")
-    st.stop()"""
-
-@st.cache_resource
-def load_model():
-    with open("modelo_final_pipeline.pkl", "rb") as f:
-        return pickle.load(f)
+#pipeline = joblib.load('modelo_final_pipeline.pkl')
 
 # Interfaz de usuario
 st.title("Predicción de TOTAL_OP_(m)")
