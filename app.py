@@ -4,7 +4,7 @@ import joblib
 import pandas as pd
 
 # Cargar el pipeline final
-#pipeline = joblib.load('modelo_final_pipeline.pkl')
+pipeline = joblib.load('modelo_final_pipeline.pkl')
 
 # Interfaz de usuario
 st.title("Predicción de TOTAL_OP_(m)")
