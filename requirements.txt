@@ -3,3 +3,4 @@ pandas
 joblib
 streamlit
 pipeline
+xgboost
