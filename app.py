@@ -5,7 +5,8 @@ import pandas as pd
 
 # Cargar el pipeline final
 try:
-    pipeline = joblib.load('modelo_final_pipeline.pkl')
+    with st.spinner("Cargando modelo..."):
+        pipeline = joblib.load('modelo_final_pipeline.pkl')
 except FileNotFoundError:
     st.error("Archivo 'modelo_final_pipeline.pkl' no encontrado.")
     st.stop()
