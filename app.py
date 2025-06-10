@@ -5,7 +5,7 @@ import time
 import plotly.express as px
 
 # Cargar el modelo
-pipeline = pickle.load(open('/content/modelo_mejor.pkl', 'rb'))
+pipeline = pickle.load(open('modelo_mejor.pkl', 'rb'))
 
 # Inicializar tablas en session_state
 if 'simulaciones' not in st.session_state:
