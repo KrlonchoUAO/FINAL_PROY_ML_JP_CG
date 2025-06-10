@@ -1,11 +1,27 @@
 import streamlit as st
 import pandas as pd
-import pickle
+#import pickle
+import joblib
 import time
 import plotly.express as px
 
 # Cargar el modelo
-pipeline = pickle.load(open('modelo_mejor.pkl', 'rb'))
+#pipeline = pickle.load(open('modelo_mejor.pkl', 'rb'))
+@st.cache_resource
+def load_model():
+    """Carga el pipeline de preprocesamiento y el modelo predictivo."""
+    try:
+        pipeline = joblib.load('modelo_mejor.pkl')
+        st.success("Modelo cargado correctamente!")
+        return pipeline
+    except FileNotFoundError:
+        st.error("Error: El archivo 'modelo_mejor.pkl' no fue encontrado. Asegúrate de que esté en la raíz del repositorio de GitHub.")
+        return None
+    except Exception as e:
+        st.error(f"Ocurrió un error al cargar el modelo: {e}")
+        return None
+
+pipeline = load_model()
 
 # Inicializar tablas en session_state
 if 'simulaciones' not in st.session_state:
