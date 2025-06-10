@@ -1,5 +1,6 @@
-scikit-learn
 pandas
 joblib
 streamlit
 plotly.express
+scikit-learn==1.6.1
+xgboost==3.0.2
