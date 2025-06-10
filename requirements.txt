@@ -2,6 +2,5 @@ scikit-learn
 pandas
 joblib
 streamlit
-pickle
 time
 plotly.express
